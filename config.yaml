@@ -115,15 +115,13 @@ Proxy:
 # 配置开始
 - name: "V2ray节点的主机测试"
   type: vmess
-  server: v2rayssr.com
-  port: 443
-  uuid: 5b8098e0-c95d-4c74-b5d5-4a330969c8cb
+  server: 34.92.103.200
+  port: 23456
+  uuid: b8b767fc-d7e1-4c33-cd07-c82163376a61
   alterId: 2
   cipher: auto
-  tls: true
-  network: ws
-  ws-path: /v2rayssrcom/
-  Host: v2rayssr.com
+  tls: false
+  network: kcp
 
 - name: "Trojan节点的主机测试"
   type: trojan
