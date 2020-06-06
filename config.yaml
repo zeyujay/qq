@@ -125,7 +125,7 @@ Proxy:
 
 - name: "Trojan节点的主机测试"
   type: trojan
-  server: www.zeyujay.cf
+  server: www.zeyu.cf
   port: 443
   password: zhouzeyu
 
