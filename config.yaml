@@ -83,7 +83,7 @@ proxies:
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
   # Shadowsocks(v2ray-plugin)
-  - name: '1'
+  - name: 'us-west2-c'
     type: trojan
     server: www.zeyujay.cf
     port: 443
@@ -125,7 +125,7 @@ proxies:
     # ws-headers:
     #   Host: v2ray.com
   # Trojan
-  - name: '4'
+  - name: 'asia-east2-b'
     type: trojan
     server: www.zeyu.cf
     port: 443
@@ -144,10 +144,10 @@ proxy-groups:
   - name: 'UrlTest'
     type: url-test
     proxies:
-      - '1'
+      - 'us-west2-c'
       - '2'
       - '3'
-      - '4'
+      - 'asia-east2-b'
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
@@ -178,10 +178,10 @@ proxy-groups:
     type: select
     proxies:
       - 'UrlTest'
-      - '1'
+      - 'us-west2-c'
       - '2'
       - '3'
-      - '4'
+      - 'asia-east2-b'
 
   # 白名单模式 PROXY，黑名单模式 DIRECT
   - name: 'Final'
@@ -202,19 +202,19 @@ proxy-groups:
     type: select
     proxies:
       - 'PROXY'
-      - '1'
+      - 'us-west2-c'
       - '2'
       - '3'
-      - '4'
+      - 'asia-east2-b'
   # 大陆流媒体面向港澳台限定服务
   - name: 'HKMTMedia'
     type: select
     proxies:
       - 'DIRECT'
-      - '1'
+      - 'us-west2-c'
       - '2'
       - '3'
-      - '4'
+      - 'asia-east2-b'
 
 # 规则
 Rule:
