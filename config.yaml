@@ -83,7 +83,7 @@ proxies:
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
   # Shadowsocks(v2ray-plugin)
-  - name: 'us-west2-c'
+  - name: 'asia-east2-c'
     type: trojan
     server: www.zeyujay.cf
     port: 443
