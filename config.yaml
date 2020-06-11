@@ -83,7 +83,7 @@ proxies:
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
   # Shadowsocks(v2ray-plugin)
-  - name: 'asia-east2-c'
+  - name: 'asia-southeast1-c'
     type: trojan
     server: www.zeyujay.cf
     port: 443
@@ -144,7 +144,7 @@ proxy-groups:
   - name: 'UrlTest'
     type: url-test
     proxies:
-      - 'asia-east2-c'
+      - 'asia-southeast1-c'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -178,7 +178,7 @@ proxy-groups:
     type: select
     proxies:
       - 'UrlTest'
-      - 'asia-east2-c'
+      - 'asia-southeast1-c'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -202,7 +202,7 @@ proxy-groups:
     type: select
     proxies:
       - 'PROXY'
-      - 'asia-east2-c'
+      - 'asia-southeast1-c'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -211,7 +211,7 @@ proxy-groups:
     type: select
     proxies:
       - 'DIRECT'
-      - 'asia-east2-c'
+      - 'asia-southeast1-c'
       - '2'
       - '3'
       - 'asia-east2-b'
