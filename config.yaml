@@ -206,6 +206,11 @@ proxy-groups:
       - '2'
       - '3'
       - 'asia-east2-b'
+  # netflix
+  - name: 'Netflix'
+    type: select
+    proxies:
+      - 'asia-southeast1-c'
   # 大陆流媒体面向港澳台限定服务
   - name: 'HKMTMedia'
     type: select
@@ -610,35 +615,7 @@ Rule:
   # USER-AGENT,mytv*,GlobalMedia
   - DOMAIN-SUFFIX,mytvsuper.com,GlobalMedia
   - DOMAIN-SUFFIX,tvb.com,GlobalMedia
-  # > Netflix
-  # USER-AGENT,Argo*,GlobalMedia
-  - DOMAIN-SUFFIX,fast.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflix.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflix.net,GlobalMedia
-  - DOMAIN-SUFFIX,nflxext.com,GlobalMedia
-  - DOMAIN-SUFFIX,nflximg.com,GlobalMedia
-  - DOMAIN-SUFFIX,nflximg.net,GlobalMedia
-  - DOMAIN-SUFFIX,nflxso.net,GlobalMedia
-  - DOMAIN-SUFFIX,nflxvideo.net,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest0.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest1.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest2.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest3.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest4.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest5.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest6.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest7.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest8.com,GlobalMedia
-  - DOMAIN-SUFFIX,netflixdnstest9.com,GlobalMedia
-  - IP-CIDR,23.246.0.0/18,GlobalMedia,no-resolve
-  - IP-CIDR,37.77.184.0/21,GlobalMedia,no-resolve
-  - IP-CIDR,45.57.0.0/17,GlobalMedia,no-resolve
-  - IP-CIDR,64.120.128.0/17,GlobalMedia,no-resolve
-  - IP-CIDR,66.197.128.0/17,GlobalMedia,no-resolve
-  - IP-CIDR,108.175.32.0/20,GlobalMedia,no-resolve
-  - IP-CIDR,192.173.64.0/18,GlobalMedia,no-resolve
-  - IP-CIDR,198.38.96.0/19,GlobalMedia,no-resolve
-  - IP-CIDR,198.45.48.0/20,GlobalMedia,no-resolve
+
   # > niconico
   # USER-AGENT,Niconico*,GlobalMedia
   - DOMAIN-SUFFIX,dmc.nico,GlobalMedia
@@ -684,7 +661,35 @@ Rule:
   # > bilibili
   - DOMAIN-SUFFIX,bilibili.com,HKMTMedia
   - DOMAIN,upos-hz-mirrorakam.akamaized.net,HKMTMedia
-
+  # > Netflix
+  # USER-AGENT,Argo*,Netflix
+  - DOMAIN-SUFFIX,fast.com,Netflix
+  - DOMAIN-SUFFIX,netflix.com,Netflix
+  - DOMAIN-SUFFIX,netflix.net,Netflix
+  - DOMAIN-SUFFIX,nflxext.com,Netflix
+  - DOMAIN-SUFFIX,nflximg.com,Netflix
+  - DOMAIN-SUFFIX,nflximg.net,Netflix
+  - DOMAIN-SUFFIX,nflxso.net,Netflix
+  - DOMAIN-SUFFIX,nflxvideo.net,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest0.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest1.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest2.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest3.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest4.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest5.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest6.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest7.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest8.com,Netflix
+  - DOMAIN-SUFFIX,netflixdnstest9.com,Netflix
+  - IP-CIDR,23.246.0.0/18,Netflix,no-resolve
+  - IP-CIDR,37.77.184.0/21,Netflix,no-resolve
+  - IP-CIDR,45.57.0.0/17,Netflix,no-resolve
+  - IP-CIDR,64.120.128.0/17,Netflix,no-resolve
+  - IP-CIDR,66.197.128.0/17,Netflix,no-resolve
+  - IP-CIDR,108.175.32.0/20,Netflix,no-resolve
+  - IP-CIDR,192.173.64.0/18,Netflix,no-resolve
+  - IP-CIDR,198.38.96.0/19,Netflix,no-resolve
+  - IP-CIDR,198.45.48.0/20,Netflix,no-resolve
   # (DNS Cache Pollution Protection)
   # > Google
   - DOMAIN-SUFFIX,ampproject.org,PROXY
