@@ -85,7 +85,7 @@ proxies:
   # Shadowsocks(v2ray-plugin)
   - name: 'asia-southeast1-c'
     type: trojan
-    server: www.zeyujay.cf
+    server: www.zeyu.cf
     port: 443
     password: zhouzeyu
 
