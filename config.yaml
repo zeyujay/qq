@@ -83,11 +83,11 @@ proxies:
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
   # Shadowsocks(v2ray-plugin)
-  - name: 'asia-southeast1-c'
+  - name: 'netflix'
     type: trojan
     server: www.zeyu.cf
     port: 443
-    password: zhouzeyu
+    password: netflix
 
     # udp: true
   # Shadowsocks(v2ray-plugin)
