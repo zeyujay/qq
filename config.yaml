@@ -144,7 +144,7 @@ proxy-groups:
   - name: 'UrlTest'
     type: url-test
     proxies:
-      - 'asia-southeast1-c'
+      - 'netflix'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -178,7 +178,7 @@ proxy-groups:
     type: select
     proxies:
       - 'UrlTest'
-      - 'asia-southeast1-c'
+      - 'netflix'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -202,7 +202,7 @@ proxy-groups:
     type: select
     proxies:
       - 'PROXY'
-      - 'asia-southeast1-c'
+      - 'netflix'
       - '2'
       - '3'
       - 'asia-east2-b'
@@ -210,13 +210,13 @@ proxy-groups:
   - name: 'Netflix'
     type: select
     proxies:
-      - 'asia-southeast1-c'
+      - 'netflix'
   # 大陆流媒体面向港澳台限定服务
   - name: 'HKMTMedia'
     type: select
     proxies:
       - 'DIRECT'
-      - 'asia-southeast1-c'
+      - 'netflix'
       - '2'
       - '3'
       - 'asia-east2-b'
