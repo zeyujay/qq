@@ -87,7 +87,7 @@ proxies:
     type: trojan
     server: www.zeyu.cf
     port: 443
-    password: 1
+    password: zhouzeyu123
 
     # udp: true
   # Shadowsocks(v2ray-plugin)
