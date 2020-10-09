@@ -223,7 +223,7 @@ proxy-groups:
       - 'asia-east2-b'
 
 # 规则
-Rule:
+rules:
   # Unbreak
   # > Google
   - DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
