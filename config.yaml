@@ -4,6 +4,7 @@ port: 7890
 # SOCKS5 端口
 socks-port: 7891
 
+
 # Linux 及 macOS 的 redir 端口
 # redir-port: 7892
 
