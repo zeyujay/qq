@@ -88,7 +88,7 @@ proxies:
     type: trojan
     server: www.zeyu.cf
     port: 443
-    password: zhouzeyu123
+    password: zhouzeyu
 
     # udp: true
   # Shadowsocks(v2ray-plugin)
@@ -143,8 +143,6 @@ proxy-groups:
   - name: 'UrlTest'
     type: url-test
     proxies:
-      - 'netflix'
-      - '2'
       - '3'
       - 'asia-east2-b'
     url: 'http://www.gstatic.com/generate_204'
@@ -177,8 +175,6 @@ proxy-groups:
     type: select
     proxies:
       - 'UrlTest'
-      - 'netflix'
-      - '2'
       - '3'
       - 'asia-east2-b'
 
@@ -201,8 +197,6 @@ proxy-groups:
     type: select
     proxies:
       - 'PROXY'
-      - 'netflix'
-      - '2'
       - '3'
       - 'asia-east2-b'
   # netflix
@@ -215,8 +209,6 @@ proxy-groups:
     type: select
     proxies:
       - 'DIRECT'
-      - 'netflix'
-      - '2'
       - '3'
       - 'asia-east2-b'
 
