@@ -4,7 +4,6 @@ port: 7890
 # SOCKS5 端口
 socks-port: 7891
 
-
 # Linux 及 macOS 的 redir 端口
 # redir-port: 7892
 
@@ -46,7 +45,7 @@ experimental:
 # # 实验性 hosts, 支持通配符（如 *.clash.dev 甚至 *.foo.*.examplex.com ）
 # # 静态域的优先级高于通配符域（foo.example.com > *.example.com）
 hosts:
-  'mtalk.google.com': 108.177.125.188
+  "mtalk.google.com": 108.177.125.188
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
 
@@ -84,7 +83,7 @@ proxies:
   #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
   # Shadowsocks(v2ray-plugin)
-  - name: 'netflix'
+  - name: "netflix"
     type: trojan
     server: www.zeyu.cf
     port: 443
@@ -92,39 +91,8 @@ proxies:
 
     # udp: true
   # Shadowsocks(v2ray-plugin)
-  - name: '2'
-    type: ss
-    server: 1.2.4.8
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: 'password'
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket # no QUIC now
-      # tls: true # wss
-      # skip-cert-verify: true
-      # host: bing.com
-      # path: "/"
-      # mux: true
-      # headers:
-      #   custom: value
-
-  # VMess
-  - name: '3'
-    type: trojan
-    server: www.zeyujay.cf
-    port: 443
-    password: zhouzeyu
-
-    # udp: true
-    # tls: true
-    # skip-cert-verify: true
-    # network: ws
-    # ws-path: /path
-    # ws-headers:
-    #   Host: v2ray.com
   # Trojan
-  - name: 'asia-east2-b'
+  - name: "hk"
     type: trojan
     server: www.zeyu.cf
     port: 443
@@ -140,12 +108,11 @@ proxies:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 proxy-groups:
   # url-test 通过指定的 URL 测试并选择延迟最低的节点
-  - name: 'UrlTest'
+  - name: "UrlTest"
     type: url-test
     proxies:
-      - '3'
-      - 'asia-east2-b'
-    url: 'http://www.gstatic.com/generate_204'
+      - "hk"
+    url: "http://www.gstatic.com/generate_204"
     interval: 300
 
   # fallback 通过指定的 URL 测试并选择可用的节点，当 1 故障不可用时自动切换到 2 以此类推
@@ -171,47 +138,43 @@ proxy-groups:
   #   interval: 300
 
   # 代理节点选择
-  - name: 'PROXY'
+  - name: "PROXY"
     type: select
     proxies:
-      - 'UrlTest'
-      - '3'
-      - 'asia-east2-b'
+      - "UrlTest"
+      - "hk"
 
   # 白名单模式 PROXY，黑名单模式 DIRECT
-  - name: 'Final'
+  - name: "Final"
     type: select
     proxies:
-      - 'PROXY'
-      - 'DIRECT'
+      - "PROXY"
+      - "DIRECT"
 
   # Apple 服务代理
-  - name: 'Apple'
+  - name: "Apple"
     type: select
     proxies:
-      - 'PROXY'
-      - 'DIRECT'
-      
+      - "PROXY"
+      - "DIRECT"
 
   # 国际流媒体服务
-  - name: 'GlobalMedia'
+  - name: "GlobalMedia"
     type: select
     proxies:
-      - 'PROXY'
-      - '3'
-      - 'asia-east2-b'
+      - "PROXY"
+      - "hk"
   # netflix
-  - name: 'Netflix'
+  - name: "Netflix"
     type: select
     proxies:
-      - 'netflix'
+      - "netflix"
   # 大陆流媒体面向港澳台限定服务
-  - name: 'HKMTMedia'
+  - name: "HKMTMedia"
     type: select
     proxies:
-      - 'DIRECT'
-      - '3'
-      - 'asia-east2-b'
+      - "DIRECT"
+      - "hk"
 
 # 规则
 rules:
@@ -1671,7 +1634,7 @@ rules:
 cfw-bypass:
   - qq.com
   - music.163.com
-  - '*.music.126.net'
+  - "*.music.126.net"
   - localhost
   - 127.*
   - 10.*
