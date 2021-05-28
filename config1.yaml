@@ -85,7 +85,7 @@ proxies:
   # Shadowsocks(v2ray-plugin)
   - name: "netflix"
     type: trojan
-    server: www.zeyu.cf
+    server: zeyu.cf
     port: 443
     password: zhouzeyu
 
@@ -94,7 +94,7 @@ proxies:
   # Trojan
   - name: "hk"
     type: trojan
-    server: www.zeyu.cf
+    server: zeyu.cf
     port: 443
     password: zhouzeyu
     # udp: true
