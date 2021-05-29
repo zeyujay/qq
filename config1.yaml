@@ -143,6 +143,7 @@ proxy-groups:
     proxies:
       - "UrlTest"
       - "hk"
+      - "netflix"
 
   # 白名单模式 PROXY，黑名单模式 DIRECT
   - name: "Final"
