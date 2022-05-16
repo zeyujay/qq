@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇲 us.slonger.net:443, server: us.slonger.net, port: 443, type: trojan, password: longtian, sni: us.slonger.net}
+  - {name: 🇺🇲 zeyu.ml:443, server: zeyu.ml, port: 443, type: trojan, password: zhouzeyu, sni: zeyu.ml}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
